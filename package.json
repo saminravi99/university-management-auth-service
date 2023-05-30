@@ -14,7 +14,7 @@
     "lint-prettier:fix": "yarn lint:fix && yarn prettier:fix"
   },
   "lint-staged": {
-    "*.{js,ts}": "yarn lint-prettier:fix"
+    "*.{js,ts}": "yarn lint-prettier:check"
   },
   "keywords": [],
   "author": "Samin Israr Ravi",
