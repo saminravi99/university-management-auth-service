@@ -2,16 +2,19 @@
   "name": "university-management-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Samin Israr Ravi",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/mongoose": "^5.11.97",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
@@ -19,6 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongodb": "^5.5.0",
     "mongoose": "^7.2.1"
   }
 }
