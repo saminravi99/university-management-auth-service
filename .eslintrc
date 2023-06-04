@@ -12,12 +12,36 @@
   ],
 
   "rules": {
+    "no-undef": "error",
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "no-constant-condition": "warn",
+    "no-empty": "warn",
+    "no-unused-expressions": "error",
+    "no-unreachable": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    // "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+    "@typescript-eslint/consistent-type-definitions": ["warn", "interface"]
   },
 
   "env": {
     "browser": true,
-    "es2021": true
-  }
+    "es2021": true,
+    "node": true,
+    "commonjs": true
+  },
+  "globals": {
+    "process": true,
+    "console": true,
+    "module": true,
+    "require": true,
+    "__dirname": true
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "error"
+      }
+    }
+  ]
 }
