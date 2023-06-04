@@ -17,6 +17,8 @@ const UserSchema = new Schema<IUser, UserModel>(
     role: {
       type: String,
       enum: ['student', 'teacher', 'admin'],
+      required: true,
+      default: 'student',
     },
     password: {
       type: String,
@@ -28,4 +30,6 @@ const UserSchema = new Schema<IUser, UserModel>(
   }
 )
 
-export default model<IUser, UserModel>('User', UserSchema)
+const User = model<IUser, UserModel>('User', UserSchema)
+
+export default User
