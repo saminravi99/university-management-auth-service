@@ -1,10 +1,10 @@
-// import mongoose from 'mongoose'
+import mongoose from 'mongoose'
 import app from './app/app'
 import config from './config'
 
 async function bootstrap() {
   try {
-    // await mongoose.connect(config.db_uri as string)
+    await mongoose.connect(config.db_uri as string)
     app.listen(config.port, () => {
       console.log(`Server listening on port ${config.port}`)
     })
